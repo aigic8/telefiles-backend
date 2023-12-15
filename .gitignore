@@ -1,0 +1,9 @@
+venv
+**/__pycache__/
+src/files
+src/sessions
+.env
+src/.env
+sandbox
+.idea
+.vscode
