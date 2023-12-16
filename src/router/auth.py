@@ -4,9 +4,9 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 import uuid
 
-from common import validate_session
-from lib.tc import TC
-from t import Response
+from src.common import validate_session
+from src.lib.tc import TC
+from src.t import Response
 
 
 class SendCodeRequestBody(BaseModel):
@@ -64,7 +64,7 @@ def new_auth_router(tc: TC):
 
     @r.post("/logout")
     async def logout(
-        session: Annotated[str | None, Cookie()] = None
+        session: Annotated[str | None, Cookie()] = None,
     ) -> Response[LogoutResponseData]:
         session_path = validate_session(session)
         async with tc.session(session_path) as s:

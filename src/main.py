@@ -1,6 +1,6 @@
-from common import load_config
-from lib.tc import TC
-from router import auth, dialogs, messages
+from src.common import load_config
+from src.lib.tc import TC
+from src.router import auth, dialogs, messages
 from fastapi import FastAPI
 from pathlib import Path
 
