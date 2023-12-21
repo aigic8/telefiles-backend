@@ -20,7 +20,7 @@ from telethon.tl.custom import Dialog as Dlg
 import asyncio
 import socks
 
-from src.t import Dialog, MediaInfo, Message, MessageFilter, MessageKind
+from t import Dialog, MediaInfo, Message, MessageFilter, MessageKind
 
 
 @dataclass(kw_only=True, frozen=True)

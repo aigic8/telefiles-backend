@@ -4,9 +4,9 @@ from fastapi import APIRouter, Cookie
 from pydantic import BaseModel
 
 
-from src.common import validate_session
-from src.lib.tc import TC
-from src.t import Dialog, Message, Response
+from common import validate_session
+from lib.tc import TC
+from t import Dialog, Message, Response
 
 
 class GetDialogsResponseData(BaseModel):

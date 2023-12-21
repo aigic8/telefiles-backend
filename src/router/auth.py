@@ -2,15 +2,16 @@ from typing import Annotated
 from fastapi import APIRouter, Cookie
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
+from pydantic_extra_types import phone_numbers
 import uuid
 
-from src.common import validate_session
-from src.lib.tc import TC
-from src.t import Response
+from common import validate_session
+from lib.tc import TC
+from t import Response
 
 
 class SendCodeRequestBody(BaseModel):
-    phone: str
+    phone: phone_numbers.PhoneNumber
 
 
 class SendCodeResponseData(BaseModel):
